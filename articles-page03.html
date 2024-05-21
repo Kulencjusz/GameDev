@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kulencjusz GameDev</title>
+    <link rel="stylesheet" href="style2.css">
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <script src="index.js"></script>
+    <script src="user.js"></script>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu-container">
+        <div class="menu-drawer">
+            <nav class="menu-drawer-list">
+                <ul>
+                    <li><a href="articles.html" id="articles-link">ARTYKUŁY</a></li>
+                    <li><a href="projects.html" id="projects-link">PROJEKTY</a></li>
+                    <li><a href="forum.html" id="forum-link">FORUM</a></li>
+                    <li><a href="community.html" id="community-link">SPOŁECZNOŚĆ</a></li>
+                    <li><a href="about.html" id="about-link">O NAS</a></li>
+                    <li><a href="Dokumentacja.pdf" download="Dokumentacja.pdf" target="_blank">Dokumentacja</a></li>
+                    <li><a href="INTERFEJS_INSTRUKCJE.pdf" download="INTERFEJS_INSTRUKCJE.pdf" target="_blank">Instrukcja obsługi</a></li>
+                    
+                    <li><a href="https://github.com/Kulencjusz" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a></li>
+                </ul>
+            </nav>
+        </div>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    </div>
+    <h1><a href="index.html">Game Development</a></h1>
+    <div class="search" id="login-register-section">
+        <input type="text" placeholder="Wyszukaj na stronie...">
+        <a href="login.html" class="button">ZALOGUJ SIĘ</a>
+        <a href="register.html" class="button-text">ZAREJESTRUJ SIĘ</a>
+    </div>
+    <div id="user-section" style="display: none;">
+        <span>Witaj, <span id="username"></span></span>
+        <button onclick="logout()">Wyloguj się</button>
+    </div>
+    <header class="menu">
+        <nav class="menu-list">
+            <ul>
+                <li><a href="articles.html" class="active" id="articles.html" id="articles-link">ARTYKUŁY</a></li>
+                <li><a href="projects.html" id="projects-link">PROJEKTY</a></li>
+                <li><a href="forum.html" id="forum-link">FORUM</a></li>
+                <li><a href="community.html" id="community-link">SPOŁECZNOŚĆ</a></li>
+                <li><a href="about.html" id="about-link">O NAS</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="content-container">
+        <div class="main-panel">
+            <h2>Artykuły</h2>
+            <h3>Zbior artykułów na tematy związane z tworzeniem gier.</h3>
+            <h4>Autor: Akari Aozora</h2>
+            <h4>Data: 25 kwiecień 2024</h2>
+            <h4>Kategoria: Pisanie gier w Unity</h2>
+            <h4>Opis: Praktyczny Przewodnik Z Kodami Dla Początkujących.</h2>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;<b>Tworzenie Średniozaawansowanej Gry W Unity!</b>
+            <br><br>Tworzenie gry w Unity może być fascynującym wyzwaniem. W tym artykule omówimy kroki niezbędne do stworzenia średniozaawansowanej gry platformowej w Unity, a także zaprezentujemy przykładowy kod do implementacji niektórych funkcji gry.
+            <br><br><b>1. Projektowanie Głównego Środowiska Gry</b><br><br>
+            Rozpocznijmy od stworzenia terenu gry. W Unity możemy użyć narzędzi do malowania terenu i teksturowania, na przykład:
+            <table>
+                <tr>
+                    <th>Kod</th>
+                    <th>Opis</th>
+                </tr>
+                <tr>
+                    <td><code>using UnityEngine;</code><br>
+                        <code>public class TerrainGenerator : MonoBehaviour {</code><br>
+                        <code>    public Terrain terrain;</code><br>
+                        <code>    public Texture2D terrainTexture;</code><br>
+                        <code>    void Start() {</code><br>
+                        <code>        if (terrain != null && terrainTexture != null) {</code><br>
+                        <code>            TerrainData terrainData = terrain.terrainData;</code><br>
+                        <code>            float[,] heights = new float[terrainTexture.width, terrainTexture.height];</code><br>
+                        <code>            for (int x = 0; x < terrainTexture.width; x++) {</code><br>
+                        <code>                for (int y = 0; y < terrainTexture.height; y++) {</code><br>
+                        <code>                    heights[x, y] = terrainTexture.GetPixel(x, y).grayscale;</code><br>
+                        <code>                }</code><br>
+                        <code>            }</code><br>
+                        <code>            terrainData.SetHeights(0, 0, heights);</code><br>
+                        <code>        }</code><br>
+                        <code>    }</code><br>
+                        <code>}</code></td>
+                    <td>Kod do generowania terenu na podstawie tekstury w Unity.</td>
+                </tr>
+            </table>
+            <br><br><b>2. Tworzenie Postaci Głównej</b><br><br>
+            Następnie stwórzmy postać gracza i dodajmy do niej podstawowe zachowanie, takie jak poruszanie się i skakanie. Poniżej znajduje się przykładowy kod do kontrolowania postaci gracza:
+            <table>
+                <tr>
+                    <th>Kod</th>
+                    <th>Opis</th>
+                </tr>
+                <tr>
+                    <td><code>using UnityEngine;</code><br>
+                        <code>public class PlayerController : MonoBehaviour {</code><br>
+                        <code>    public float moveSpeed = 5f;</code><br>
+                        <code>    public float jumpForce = 10f;</code><br>
+                        <code>    private Rigidbody2D rb;</code><br>
+                        <code>    void Start() {</code><br>
+                        <code>        rb = GetComponent<Rigidbody2D>();</code><br>
+                        <code>    }</code><br>
+                        <code>    void Update() {</code><br>
+                        <code>        float horizontalInput = Input.GetAxis("Horizontal");</code><br>
+                        <code>        rb.velocity = new Vector2(horizontalInput * moveSpeed, rb.velocity.y);</code><br>
+                        <code>        if (Input.GetKeyDown(KeyCode.Space)) {</code><br>
+                        <code>            rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);</code><br>
+                        <code>        }</code><br>
+                        <code>    }</code><br>
+                        <code>}</code></td>
+                    <td>Kod do sterowania postacią gracza w grze Unity.</td>
+                </tr>
+            </table>
+            <br><br><b>3. Implementacja Mechanik Gry</b><br><br>
+            Dodajmy teraz elementy interakcji, takie jak zbieranie punktów i obsługa kolizji z przeszkodami. Oto przykładowy kod do obsługi zbierania punktów:
+            <table>
+                <tr>
+                    <th>Kod</th>
+                    <th>Opis</th>
+                </tr>
+                <tr>
+                    <td><code>using UnityEngine;</code><br>
+                        <code>public class Collectible : MonoBehaviour {</code><br>
+                        <code>    public int points = 10;</code><br>
+                        <code>    private void OnTriggerEnter2D(Collider2D collision) {</code><br>
+                        <code>        if (collision.CompareTag("Player")) {</code><br>
+                        <code>            GameManager.instance.AddPoints(points);</code><br>
+                        <code>            Destroy(gameObject);</code><br>
+                        <code>        }</code><br>
+                        <code>    }</code><br>
+                        <code>}</code></td>
+                    <td>Kod do obsługi zbierania punktów w grze Unity.</td>
+                </tr>
+            </table>
+            <br><br><b>4. Projektowanie Poziomów</b><br><br>
+            Stwórzmy teraz kilka poziomów gry. Możemy użyć scen Unity do stworzenia różnych poziomów i łatwo nimi zarządzać w kodzie.
+            <br><br><b>5. Dodanie Efektów Dźwiękowych i Graficznych</b><br><br>
+            Dodajmy jeszcze efekty dźwiękowe i wizualne, aby gra była bardziej immersyjna. Możemy użyć komponentów Audio i Particle System w Unity do dodania dźwięków i efektów wizualnych.
+            <br><br><b>6. Testowanie i Debugowanie</b><br><br>
+            Nie zapomnij przetestować gry i zdebugować ją, aby znaleźć i naprawić wszelkie błędy.
+            <br><br><b>Podsumowanie</b><br><br>
+            Tworzenie średniozaawansowanej gry w Unity wymaga zaangażowania i znajomości wielu funkcji i komponentów tego silnika. W tym artykule omówiliśmy podstawowe kroki oraz zaprezentowaliśmy przykładowy kod do tworzenia gry platformowej w Unity. Pamiętaj, że proces tworzenia gry to nieustanny proces nauki i doskonalenia, więc nie wahaj się eksperymentować i poszukiwać nowych rozwiązań.
+            </p>
+                <p class="next-button"><a onclick="scrollToTop()">Top ↑</a></p>
+                <p class="next-button"><a href="articles-page02.html"><- Podstawy pisanie gier</a></p>
+            </div>
+        <div class="new-projects">
+            <h4>Ostatnio dodane projekty</h4>
+            <p class="article2">Autor: Kulencjusz<br>Tytuł: Haunted Forest</p>
+            <p><a href="projects.html">Graj</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer-content">
+            <ul>
+                <li>KONTAKT wwfire@vp.pl</li>
+                <li>Copyright @ 2024 Kulencjusz</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

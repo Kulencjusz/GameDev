@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kulencjusz GameDev</title>
+    <link rel="stylesheet" href="style2.css">
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <script src="index.js"></script>
+    <script src="user.js"></script>
+</head>
+<body>
+    <div class="menu-container">
+        <div class="menu-drawer">
+            <nav class="menu-drawer-list">
+                <ul>
+                    <li><a href="articles.html" id="articles-link">ARTYKUŁY</a></li>
+                    <li><a href="projects.html" id="projects-link">PROJEKTY</a></li>
+                    <li><a href="forum.html" id="forum-link">FORUM</a></li>
+                    <li><a href="community.html" id="community-link">SPOŁECZNOŚĆ</a></li>
+                    <li><a href="about.html" id="about-link">O NAS</a></li>
+                    <li><a href="Dokumentacja.pdf" download="Dokumentacja.pdf" target="_blank">Dokumentacja</a></li>
+                    <li><a href="INTERFEJS_INSTRUKCJE.pdf" download="INTERFEJS_INSTRUKCJE.pdf" target="_blank">Instrukcja obsługi</a></li>
+                    
+                    <li><a href="https://github.com/Kulencjusz" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a></li>
+                </ul>
+            </nav>
+        </div>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    </div>
+    <h1><a href="index.html">Game Development</a></h1>
+    <div class="search" id="login-register-section">
+        <input type="text" placeholder="Wyszukaj na stronie...">
+        <a href="login.html" class="button">ZALOGUJ SIĘ</a>
+        <a href="register.html" class="button-text">ZAREJESTRUJ SIĘ</a>
+    </div>
+    <div id="user-section" style="display: none;">
+        <span>Witaj, <span id="username"></span></span>
+        <button onclick="logout()">Wyloguj się</button>
+    </div>
+    <header class="menu">
+        <nav class="menu-list">
+            <ul>
+                <li><a href="articles.html" class="active" id="articles.html" id="articles-link">ARTYKUŁY</a></li>
+                <li><a href="projects.html" id="projects-link">PROJEKTY</a></li>
+                <li><a href="forum.html" id="forum-link">FORUM</a></li>
+                <li><a href="community.html" id="community-link">SPOŁECZNOŚĆ</a></li>
+                <li><a href="about.html" id="about-link">O NAS</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="content-container">
+        <div class="main-panel">
+            <h2>Artykuły</h2>
+            <h3>Zbior artykułów na tematy związane z tworzeniem gier.</h3>
+            <h4>Autor: Marta Kowalska</h2>
+            <h4>Data: 08 maja 2024</h2>
+            <h4>Kategoria: Podstawy tworzenia gier</h2>
+            <h4>Opis: Artykuł przedstawia przewodnik dla początkujących deweloperów gier.</h2>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;<b>Jak Zacząć Tworzyć Gry: Przewodnik Dla Początkujących</b>
+
+                Tworzenie gier to fascynujący proces, który łączy kreatywność, programowanie i sztukę. Niezależnie od tego, czy masz doświadczenie w programowaniu, czy dopiero zaczynasz swoją przygodę z tworzeniem gier, istnieje wiele sposobów, aby rozpocząć swoją podróż w świecie gamedevu. W tym artykule omówimy kilka kluczowych kroków, które pomogą Ci rozpocząć tworzenie własnych gier.
+                <br><br><b>&nbsp;&nbsp;&nbsp;&nbsp;1. Wybierz Silnik Do Tworzenia Gier</b><br>
+                <br>
+                Pierwszym krokiem w tworzeniu gier jest wybór odpowiedniego silnika do gier. Istnieje wiele popularnych silników, takich jak Unity, Unreal Engine, Godot Engine czy też Construct. Każdy z nich ma swoje zalety i wady, dlatego warto przetestować kilka z nich, aby zdecydować, który najlepiej odpowiada Twoim potrzebom i umiejętnościom.
+                <br>
+                <br><b>&nbsp;&nbsp;&nbsp;&nbsp;Unity:</b> Jest to jeden z najpopularniejszych silników do tworzenia gier, szczególnie jeśli chodzi o gry 3D. Posiada dużą społeczność oraz bogatą dokumentację, co ułatwia naukę.
+                <br><br><img src="page02.jpg" alt="Unity"><br>
+                <br><br><b>&nbsp;&nbsp;&nbsp;&nbsp;Unreal Engine:</b> Idealny dla osób, które chcą tworzyć zaawansowane gry 3D o wysokiej jakości grafice. Udostępnia wiele narzędzi do tworzenia realistycznych światów wirtualnych.
+                <br><br><img src="page02_2.jpg" alt="Unreal Engine"><br>
+                <br><br><b>&nbsp;&nbsp;&nbsp;&nbsp;Godot Engine:</b> Jest to silnik open-source, co oznacza, że jest darmowy do użytku komercyjnego. Posiada prosty interfejs, co czyni go przyjaznym dla początkujących.
+                <br><br><img src="page02_3.jpg" alt="Godot"><br>
+                <br><br><b>&nbsp;&nbsp;&nbsp;&nbsp;Construct:</b> Bardzo intuicyjny silnik, który pozwala tworzyć gry za pomocą drag-and-drop, bez konieczności programowania. Doskonały dla osób, które chcą szybko zacząć tworzyć proste gry.
+                <br><br><img src="page02_4.png" alt="Construct"><br>
+                <br><b>&nbsp;&nbsp;&nbsp;&nbsp;2. Nauka Programowania i Grafiki</b><br>
+                <br>
+                Choć niektóre silniki do gier umożliwiają tworzenie gier bez konieczności programowania, znajomość podstawowych koncepcji programowania z pewnością ułatwi Ci pracę i pozwoli na większą swobodę w tworzeniu. Znajomość języków takich jak C#, Python czy też języki skryptowe silników (np. Unreal Engine wykorzystuje język Blueprint) będzie bardzo pomocna.
+                
+                Jeśli chodzi o grafikę, warto zaznajomić się z podstawami projektowania graficznego oraz animacji, aby móc tworzyć własne tekstury, modele 3D i animacje.
+                <br><br><b>&nbsp;&nbsp;&nbsp;&nbsp;3. Dokształć Się i Eksperymentuj</b>
+                <br>
+                Proces tworzenia gier to nieustanny proces nauki i doskonalenia. Wykorzystuj dostępne kursy, tutoriale, książki i dokumentacje, aby poszerzać swoją wiedzę i umiejętności. Eksperymentuj, testuj różne pomysły i nie obawiaj się popełniać błędów – to one są częścią procesu nauki.
+                <br><br><b>&nbsp;&nbsp;&nbsp;&nbsp;4. Dołącz Do Społeczności</b>
+                <br><br>
+                Jednym z największych atutów tworzenia gier jest silna społeczność, gotowa do pomocy i wsparcia. Dołącz do forów internetowych, grup na platformach społecznościowych, udzielaj się na portalach takich jak GitHub czy Stack Overflow. Dzielenie się wiedzą i doświadczeniem z innymi twórcami gier może być nieocenione.
+                <br><br><b>&nbsp;&nbsp;&nbsp;&nbsp;Podsumowanie</b>
+                <br><br>
+                Tworzenie gier to ekscytująca i satysfakcjonująca przygoda, która wymaga połączenia wielu umiejętności, determinacji i kreatywności. Niezależnie od tego, czy dopiero zaczynasz, czy już masz doświadczenie w programowaniu, istnieje wiele sposobów, aby rozpocząć swoją podróż w świecie gamedevu. Wybierz silnik, naucz się programować, eksperymentuj i dołącz do społeczności – a już niedługo będziesz mógł cieszyć się z własnych, stworzonych z pasją gier.
+                </p>
+                <p class="next-button"><a onclick="scrollToTop()">Top ↑</a></p>
+                <p class="next-button"><a href="articles-page01.html"><- Trendy wspinaczkowe w branży gier</a></p>
+                <p class="next-button"><a href="articles-page03.html">Pisanie średniozaawansowanej gry w Unity -></a></p>
+        </div>
+        <div class="new-projects">
+            <h4>Ostatnio dodane projekty</h4>
+            <p class="article2">Autor: Kulencjusz<br>Tytuł: Haunted Forest</p>
+            <p><a href="projects.html">Graj</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer-content">
+            <ul>
+                <li>KONTAKT wwfire@vp.pl</li>
+                <li>Copyright @ 2024 Kulencjusz</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,554 @@
+body {
+    background-image: url('bg.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    margin: 0;
+    padding: 0;
+}
+
+h1 a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+.search a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+.menu-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+.menu-drawer {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100vh;
+    background-image: linear-gradient(to bottom, black, #470c6d, black);
+    transition: left 0.3s ease;
+    font-family: Georgia, sans-serif;
+}
+
+.menu-drawer-list ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.menu-drawer-list ul li {
+    text-align: center;
+    border-bottom: 1px solid white;
+}
+
+.menu-drawer-list ul li:last-child {
+    border-bottom: none;
+}
+
+.menu-drawer-list ul li a {
+    display: block;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.menu-toggle {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 24px;
+    color: white;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.content-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 20px;
+    padding: 0 20px;
+}
+
+.main-panel {
+    flex: 1;
+    background-color: rgba(217, 217, 217, 0.75);
+    padding: 20px;
+    margin-left: 4%;
+    width: 65%;
+    height: auto;
+    font-family: Georgia, sans-serif;
+}
+
+.new-projects {
+    width: 20%;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    margin-right: 4%;
+    margin-left: 2%;
+    font-family: Georgia, sans-serif;
+}
+
+.footer {
+    background-color: #1E0A47;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    margin-top: 2%;
+    font-family: Georgia, sans-serif;
+    letter-spacing: 0.1em;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    margin-bottom: 0;
+}
+
+.footer ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer ul li {
+    margin-bottom: 10px;
+}
+
+.button {
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: #06B1BC;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    position: absolute;
+    top: 3%;
+    right: 5%;
+    font-family: Georgia, sans-serif;
+    letter-spacing: 0.1em;
+}
+
+.search{
+    display: flex;
+    align-items: center;
+    font-family: Georgia, sans-serif;
+}
+
+.search input::placeholder {
+    display: flex;
+    align-items: center;
+    font-family: Georgia, sans-serif;
+    color: white;
+}
+
+.search input[type="text"] {
+    width: 200px;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    background-color: #86A7A9;
+    color: white;
+    font-size: 14px;
+    position: absolute;
+    top: 14%;
+    right: 5%;
+    font-family: Georgia, sans-serif;
+    letter-spacing: 0.1em;
+}
+
+.button-text {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    position: absolute;
+    top: 8%;
+    right: 4%;
+    font-family: Georgia, sans-serif;
+    letter-spacing: 0.1em;
+}
+
+.menu {
+    background-color: #06B1BC;
+    color: white;
+    margin: 0 auto;
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+    font-family: Georgia, sans-serif;
+    letter-spacing: 0.1em;
+    padding: 10px 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.menu h1 {
+    margin: 0;
+}
+
+.menu-list {
+    margin-top: 10px;
+}
+
+.menu-list ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.menu-list ul li {
+    display: inline-block;
+    margin: 0 10px; 
+}
+
+.menu-list ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: normal;
+}
+
+.menu-list ul li:not(:last-child)::after {
+    content: "";
+    margin: 0 10px;
+    width: 1px;
+    background-color: white;
+    transform: translateY(-40%) ; 
+    height: 150%;
+    border-right: 1px solid white; 
+    margin-right: -10px;
+}
+
+h1{
+    color: white;
+    letter-spacing: 0.2em;
+    font-family: Georgia, sans-serif;
+    font-size: 64px;
+    font-weight: normal;
+    padding-left: 5%;
+    text-decoration: none; 
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+
+h1 a {
+    color: white;
+    letter-spacing: 0.2em;
+    font-family: Georgia, sans-serif;
+    font-size: 64px;
+    font-weight: normal;
+    padding-left: 5%;
+    text-decoration: none; 
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+
+.next-button a{
+    color:#190188;
+    text-decoration: none;
+    font-family: Georgia, sans-serif;
+    font-weight: normal;
+    padding-right: 0;
+    font-size: 20px;
+    letter-spacing: 0.1em;
+}
+
+.main-panel {
+    text-align: justify;
+}
+
+.main-panel h2 {
+    color: black;
+    font-size: 32px;
+    font-family: Georgia, sans-serif;
+    text-decoration: underline;
+    font-weight: normal;
+    padding-left: 2%;
+}
+
+.main-panel h3 {
+    color: black;
+    font-size: 24px;
+    font-family: Georgia, sans-serif;
+    font-weight: normal;
+    padding-left: 2%;
+}
+
+.main-panel h4 {
+    color: black;
+    font-size: 16px;
+    font-family: Georgia, sans-serif;
+    font-weight: bold;
+    text-align: left;
+    text-decoration: underline;
+    padding-left: 2%;
+}
+
+h4 {
+    color: black;
+    font-size: 16px;
+    font-family: Georgia, sans-serif;
+    font-weight: normal;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.article2 {
+    color: black;
+    font-size: 12px;
+    font-family: Georgia, sans-serif;
+    font-weight: normal;
+    text-align: right;
+    text-decoration: underline;
+}
+
+p {
+    color: black;
+    font-size: 16px;
+    font-family: Georgia, sans-serif;
+    font-weight: normal;
+    padding-left: 2%;
+}
+
+.menu-list ul li a.active {
+    text-decoration: underline; 
+}
+
+.main-panel img {
+    max-width: 100%;
+    height: auto; 
+    display: block; 
+    margin: 0 auto;
+}
+
+.game-container {
+    text-align: center;
+    position: relative;
+}
+
+#game-text {
+    margin-bottom: 20px;
+    color:white;
+    font-size: 18px;
+}
+
+#choices button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #444;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    justify-content: center;
+}
+
+#choices button:hover {
+    background-color: #666;
+}
+
+.game-bg {
+    background-image: url('images/forest.jpg');
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 300px; 
+    padding-bottom: 300px;
+    width: auto;
+}
+
+#inventory {
+    color:white;
+    position: absolute;
+    top: -280px;
+    left: 20px;
+    font-size: 20px;
+}
+
+label {
+    font-size: 20px;
+    font-family: Georgia, sans-serif;
+    font-weight: normal;
+    color: black;
+}
+
+input {
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: rgba(77, 183, 186, 0.5);
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: Georgia, sans-serif;
+    letter-spacing: 0.1em;
+    border: 1px solid black;
+}
+
+button {
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: #06B1BC;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: Georgia, sans-serif;
+    letter-spacing: 0.1em;
+    border: none;
+}
+
+.main-panel form {
+    text-align: center;
+}
+
+form input[type="text"] {
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: rgba(77, 183, 186, 0.5);
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: Georgia, sans-serif;
+    letter-spacing: 0.1em;
+    border: 1px solid black;
+}
+
+form input[type="password"] {
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: rgba(77, 183, 186, 0.5);
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: Georgia, sans-serif;
+    letter-spacing: 0.1em;
+    border: 1px solid black;
+}
+
+form label {
+    font-size: 20px;
+    font-family: Georgia, sans-serif;
+    font-weight: normal;
+    color: black;
+}
+
+form button {
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: #06B1BC;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: Georgia, sans-serif;
+    letter-spacing: 0.1em;
+    border: none;
+}
+
+.accordion {
+    margin-top: 20px;
+  }
+  
+  .accordion-item {
+    border-bottom: 2px solid black;
+  }
+  
+  .accordion-title {
+    padding-left: 2%;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Georgia, sans-serif;
+    letter-spacing: 0.1em;
+    font-size: 28px;
+  }
+  
+  .accordion-content {
+    padding: 10px;
+    display: none;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: rgba(77, 183, 186, 0.5);
+    font-size: 20px;
+    font-family: Georgia, sans-serif;
+    letter-spacing: 0.1em;
+  }
+  
+  .arrow {
+    transition: transform 0.3s ease;
+  }
+  
+  .open {
+    transform: rotate(90deg);
+  }
+  
+  .accordion-item.active .accordion-content {
+    display: block;
+  }
+  
+  .new-projects p a{
+    background-color: #06bc21;
+    color: #06bc21;
+    font-size: 40px;
+    padding-top: 10%;
+  }
+
+  .group-info {
+    display: grid;
+    grid-template-columns: 2fr auto; /* Three columns: text, DOŁĄCZ, ZOBACZ */
+    grid-gap: 10px; /* Adjust the gap between elements */
+}
+
+.buttons button {
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: #06B1BC;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: Georgia, sans-serif;
+    letter-spacing: 0.1em;
+    border: none;
+}
+
+.buttons button:last-child {
+    margin-left: auto; /* Pushes the last button to the right */
+}
+
+a {
+    font-size: 32px;
+    padding-left: 15px;
+}
+
+/* Nowe style dla komunikatu */
+#register-message {
+    background-color: rgba(0, 123, 255, 0.75); /* Przeźroczyste niebieskie tło */
+    color: black; /* Czarny tekst */
+    font-size: 20px; /* Rozmiar czcionki */
+    padding: 10px; /* Padding wewnętrzny */
+    text-align: center; /* Wyśrodkowanie tekstu */
+    border-radius: 10px; /* Zaokrąglenie rogów */
+    margin: 20px 0; /* Marginesy */
+    display: none; /* Ukrycie domyślnie */
+}
+
+#user-section {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+}
+
+span{
+    color: white;
+    font-size: 24px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}

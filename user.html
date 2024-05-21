@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kulencjusz GameDev</title>
+    <link rel="stylesheet" href="style2.css">
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <script src="index.js"></script>
+    <script src="user.js"></script>
+</head>
+<body>
+    <div class="menu-container">
+        <div class="menu-drawer">
+            <nav class="menu-drawer-list">
+                <ul>
+                    <li><a href="articles.html" id="articles-link">ARTYKUŁY</a></li>
+                    <li><a href="projects.html" id="projects-link">PROJEKTY</a></li>
+                    <li><a href="forum.html" id="forum-link">FORUM</a></li>
+                    <li><a href="community.html" id="community-link">SPOŁECZNOŚĆ</a></li>
+                    <li><a href="about.html" id="about-link">O NAS</a></li>
+                    <li><a href="Dokumentacja.pdf" download="Dokumentacja.pdf" target="_blank">Dokumentacja</a></li>
+                    <li><a href="INTERFEJS_INSTRUKCJE.pdf" download="INTERFEJS_INSTRUKCJE.pdf" target="_blank">Instrukcja obsługi</a></li>
+                    <li><a href="https://github.com/Kulencjusz" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a></li>
+                </ul>
+            </nav>
+        </div>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    </div>
+    <h1><a href="index.html">Game Development</a></h1>
+    <div class="search" id="login-register-section">
+        <input type="text" placeholder="Wyszukaj na stronie...">
+        <a href="login.html" class="button">ZALOGUJ SIĘ</a>
+        <a href="register.html" class="button-text">ZAREJESTRUJ SIĘ</a>
+    </div>
+    <div id="user-section">
+        <span>Witaj, <span id="username"></span></span>
+        <button onclick="logout()">Wyloguj się</button>
+    </div>
+    <header class="menu">
+        <nav class="menu-list">
+            <ul>
+                <li><a href="articles.html" id="articles-link">ARTYKUŁY</a></li>
+                <li><a href="projects.html" id="projects-link">PROJEKTY</a></li>
+                <li><a href="forum.html" id="forum-link">FORUM</a></li>
+                <li><a href="community.html" id="community-link">SPOŁECZNOŚĆ</a></li>
+                <li><a href="about.html" id="about-link">O NAS</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="content-container">
+        <div class="main-panel">
+            <h2>TWOJE KONTO</h2>
+            <button>DODAJ PROJEKT</button>
+            <button>DODAJ SPOŁECZNOŚĆ</button>
+        </div>
+        <div class="new-projects">
+            <h4>Ostatnio dodane projekty</h4>
+            <p class="article2">Autor: Kulencjusz<br>Tytuł: Haunted Forest</p>
+            <p><a href="projects.html">Graj</p>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-content">
+            <ul>
+                <li>KONTAKT wwfire@vp.pl</li>
+                <li>Copyright @ 2024 Kulencjusz</li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('/checkSession')
+            .then(response => response.json())
+            .then(data => {
+                if (data.loggedIn) {
+                    document.getElementById('username').innerText = data.nickname;
+                } else {
+                    window.location.href = 'login.html';
+                }
+            })
+            .catch(error => console.error('Error checking user session:', error));
+        });
+
+        function logout() {
+            fetch('/logout')
+            .then(response => {
+                if (response.ok) {
+                    window.location.href = 'index.html';
+                } else {
+                    alert('Logout failed');
+                }
+            })
+            .catch(error => console.error('Error:', error));
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kulencjusz GameDev</title>
+    <link rel="stylesheet" href="style2.css">
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <script src="index.js"></script>
+    <script src="user.js"></script>
+    <style>
+        .article {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .article img {
+            max-width: 100px; /* maksymalna szerokość ikonki */
+            max-height: 100px; /* maksymalna wysokość ikonki */
+            margin-right: 20px;
+            margin-left: 2%;
+        }
+        .article-info {
+            flex: 1;
+        }
+        hr {
+            border: 0;
+            border-top: 1px solid #ccc;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu-container">
+        <div class="menu-drawer">
+            <nav class="menu-drawer-list">
+                <ul>
+                    <li><a href="articles.html" id="articles-link">ARTYKUŁY</a></li>
+                    <li><a href="projects.html" id="projects-link">PROJEKTY</a></li>
+                    <li><a href="forum.html" id="forum-link">FORUM</a></li>
+                    <li><a href="community.html" id="community-link">SPOŁECZNOŚĆ</a></li>
+                    <li><a href="about.html" id="about-link">O NAS</a></li>
+                    <li><a href="Dokumentacja.pdf" download="Dokumentacja.pdf" target="_blank">Dokumentacja</a></li>
+                    <li><a href="INTERFEJS_INSTRUKCJE.pdf" download="INTERFEJS_INSTRUKCJE.pdf" target="_blank">Instrukcja obsługi</a></li>
+                    
+                    <li><a href="https://github.com/Kulencjusz" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a></li>
+                </ul>
+            </nav>
+        </div>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    </div>
+    <h1><a href="index.html">Game Development</a></h1>
+    <div class="search" id="login-register-section">
+        <input type="text" placeholder="Wyszukaj na stronie...">
+        <a href="login.html" class="button">ZALOGUJ SIĘ</a>
+        <a href="register.html" class="button-text">ZAREJESTRUJ SIĘ</a>
+    </div>
+    <div id="user-section" style="display: none;">
+        <span>Witaj, <span id="username"></span></span>
+        <button onclick="logout()">Wyloguj się</button>
+    </div>
+    <header class="menu">
+        <nav class="menu-list">
+            <ul>
+                <li><a href="articles.html" class="active" id="articles.html" id="articles-link">ARTYKUŁY</a></li>
+                <li><a href="projects.html" id="projects-link">PROJEKTY</a></li>
+                <li><a href="forum.html" id="forum-link">FORUM</a></li>
+                <li><a href="community.html" id="community-link">SPOŁECZNOŚĆ</a></li>
+                <li><a href="about.html" id="about-link">O NAS</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="content-container">
+        <div class="main-panel">
+            <h2>Artykuły</h2>
+            <h3>Zbior artykułów na tematy związane z tworzeniem gier.</h3>
+            <div class="article">
+                <a href="articles-page01.html"><img src="icon1.jpg" alt="Ikona artykułu"></a>
+                <div class="article-info">
+                    <p><strong>Autor:</strong> Aleksander Nowak</p>
+                    <p><strong>Data:</strong> 11 maja 2024</p>
+                    <p><strong>Kategoria:</strong> Trendy w branży gier komputerowych</p>
+                    <p><strong>Opis:</strong> Artykuł przedstawia rosnącą popularność gier wspinaczkowych w branży gier komputerowych. Omawia trendy, nowe tytuły oraz ich wpływ na społeczność graczy. Autor analizuje rozwój tej kategorii gier oraz prognozuje jej przyszłość na rynku.</p>
+                </div>
+            </div>
+            <hr>
+            <div class="article">
+                <a href="articles-page02.html"><img src="icon2.jpg" alt="Ikona artykułu"></a>
+                <div class="article-info">
+                    <p><strong>Autor:</strong> Marta Kowalska</p>
+                    <p><strong>Data:</strong> 08 maja 2024</p>
+                    <p><strong>Kategoria:</strong> Podstawy tworzenia gier</p>
+                    <p><strong>Opis:</strong> Artykuł przedstawia przewodnik dla początkujących deweloperów gier.</p>
+                </div>
+            </div>
+            <hr>
+            <div class="article">
+                <a href="articles-page03.html"><img src="icon3.jpg" alt="Ikona artykułu"></a>
+                <div class="article-info">
+                    <p><strong>Autor:</strong> Akari Aozora</p>
+                    <p><strong>Data:</strong> 25 kwietnia 2024</p>
+                    <p><strong>Kategoria:</strong> Pisanie gier w Unity</p>
+                    <p><strong>Opis:</strong> Praktyczny Przewodnik Z Kodami Dla Początkujących.</p>
+                </div>
+            </div>
+            <hr>
+        </div>
+        <div class="new-projects">
+            <h4>Ostatnio dodane projekty</h4>
+            <p class="article2">Autor: Kulencjusz<br>Tytuł: Haunted Forest</p>
+            <p><a href="projects.html">Graj</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer-content">
+            <ul>
+                <li>KONTAKT wwfire@vp.pl</li>
+                <li>Copyright @ 2024 Kulencjusz</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

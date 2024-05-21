@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kulencjusz GameDev</title>
+    <link rel="stylesheet" href="style2.css">
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <script src="index.js"></script>
+    <script src="script.js"></script>
+    <script src="user.js"></script>
+</head>
+<body>
+    <div class="menu-container">
+        <div class="menu-drawer">
+            <nav class="menu-drawer-list">
+                <ul>
+                    <li><a href="articles.html" id="articles-link">ARTYKUŁY</a></li>
+                    <li><a href="projects.html" id="projects-link">PROJEKTY</a></li>
+                    <li><a href="forum.html" id="forum-link">FORUM</a></li>
+                    <li><a href="community.html" id="community-link">SPOŁECZNOŚĆ</a></li>
+                    <li><a href="about.html" id="about-link">O NAS</a></li>
+                    <li><a href="Dokumentacja.pdf" download="Dokumentacja.pdf" target="_blank">Dokumentacja</a></li>
+                    <li><a href="INTERFEJS_INSTRUKCJE.pdf" download="INTERFEJS_INSTRUKCJE.pdf" target="_blank">Instrukcja obsługi</a></li>
+                    
+                    <li><a href="https://github.com/Kulencjusz" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a></li>
+                </ul>
+            </nav>
+        </div>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    </div>
+    <h1><a href="index.html">Game Development</a></h1>
+    <div class="search" id="login-register-section">
+        <input type="text" placeholder="Wyszukaj na stronie...">
+        <a href="login.html" class="button">ZALOGUJ SIĘ</a>
+        <a href="register.html" class="button-text">ZAREJESTRUJ SIĘ</a>
+    </div>
+    <div id="user-section" style="display: none;">
+        <span>Witaj, <span id="username"></span></span>
+        <button onclick="logout()">Wyloguj się</button>
+    </div>
+    <header class="menu">
+        <nav class="menu-list">
+            <ul>
+                <li><a href="articles.html" id="articles-link">ARTYKUŁY</a></li>
+                <li><a href="projects.html" id="projects-link">PROJEKTY</a></li>
+                <li><a class="active" href="forum.html" id="forum-link">FORUM</a></li>
+                <li><a href="community.html" id="community-link">SPOŁECZNOŚĆ</a></li>
+                <li><a href="about.html" id="about-link">O NAS</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="content-container">
+        <div class="main-panel">
+            <h2>FORUM</h2>
+            <h3>Najczęściej zadawane pytania i odpowiedzi.</h3>
+            <a href="Dokumentacja.pdf" download="Dokumentacja.pdf" target="_blank">Dokumentacja</a>
+            <a href="INTERFEJS_INSTRUKCJE.pdf" download="INTERFEJS_INSTRUKCJE.pdf" target="_blank">Instrukcja obsługi</a>
+            <div class="accordion">
+                <div class="accordion-item">
+                  <div class="accordion-title">Jakie są najważniejsze kroki dla kogoś, kto chce rozpocząć swoją przygodę z tworzeniem gier?<span class="arrow">▶</span></div>
+                  <br><div class="accordion-content">
+                    Pierwszym krokiem jest nauka podstawowych umiejętności programowania i grafiki komputerowej. Następnie warto zaznajomić się
+                     z popularnymi silnikami do tworzenia gier, takimi jak Unity lub Unreal Engine. Kontynuuj naukę przez tworzenie prostych 
+                     projektów i eksperymentowanie z różnymi technikami.
+                  </div>
+                </div>
+                <br>
+                <div class="accordion-item">
+                  <div class="accordion-title">Czy istnieją darmowe zasoby, które mogę wykorzystać do tworzenia gier?<span class="arrow">▶</span></div>
+                  <br><div class="accordion-content">
+                    Tak, istnieje wiele darmowych zasobów, które mogą być przydatne podczas tworzenia gier. Możesz znaleźć darmowe modele 3D, tekstury, 
+                    dźwięki i wiele więcej na stronach internetowych takich jak OpenGameArt czy opengamegraphics.com. Pamiętaj jednak o sprawdzeniu 
+                    licencji każdego zasobu, aby upewnić się, że możesz go legalnie użyć w swoich projektach.
+                  </div>
+                </div>
+                <br>
+                <div class="accordion-item">
+                    <div class="accordion-title">Jakie są najczęstsze wyzwania podczas tworzenia gier?<span class="arrow">▶</span></div>
+                    <br><div class="accordion-content">
+                        Jednym z najczęstszych wyzwań jest utrzymanie równowagi między jakością a wydajnością gry, szczególnie na starszych lub
+                        mniej wydajnych urządzeniach. Ponadto, zarządzanie zespołem, harmonogramem i budżetem może również stanowić trudność.
+                        Nie należy zapominać o częstych problemach technicznych, takich jak błędy w kodzie czy optymalizacja wydajności.
+                    </div>
+                </div>
+                <br>
+                <div class="accordion-item">
+                    <div class="accordion-title">Jak mogę zacząć budować społeczność wokół mojej gry?<span class="arrow">▶</span></div>
+                    <br><div class="accordion-content">
+                        Kluczem do budowania społeczności wokół gry jest zaangażowanie i interakcja z graczami. Możesz zacząć od założenia 
+                        oficjalnych profili na mediach społecznościowych, takich jak Facebook, Twitter czy Instagram, gdzie będziesz regularnie
+                        udostępniać aktualizacje, zapowiedzi i interakcje z fanami. Organizowanie konkursów, udział w konferencjach branżowych 
+                        i prowadzenie regularnych transmisji na żywo również mogą przyczynić się do budowy społeczności wokół twojej gry.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="new-projects">
+            <h4>Ostatnio dodane projekty</h4>
+            <p class="article2">Autor: Kulencjusz<br>Tytuł: Haunted Forest</p>
+            <p><a href="projects.html">Graj</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer-content">
+            <ul>
+                <li>KONTAKT wwfire@vp.pl</li>
+                <li>Copyright @ 2024 Kulencjusz</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

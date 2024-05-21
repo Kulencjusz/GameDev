@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kulencjusz GameDev</title>
+    <link rel="stylesheet" href="style2.css">
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <script src="index.js"></script>
+    <script src="user.js"></script>
+</head>
+<body>
+    <div class="menu-container">
+        <div class="menu-drawer">
+            <nav class="menu-drawer-list">
+                <ul>
+                    <li><a href="articles.html" id="articles-link">ARTYKUŁY</a></li>
+                    <li><a href="projects.html" id="projects-link">PROJEKTY</a></li>
+                    <li><a href="forum.html" id="forum-link">FORUM</a></li>
+                    <li><a href="community.html" id="community-link">SPOŁECZNOŚĆ</a></li>
+                    <li><a href="about.html" id="about-link">O NAS</a></li>
+                    <li><a href="Dokumentacja.pdf" download="Dokumentacja.pdf" target="_blank">Dokumentacja</a></li>
+                    <li><a href="INTERFEJS_INSTRUKCJE.pdf" download="INTERFEJS_INSTRUKCJE.pdf" target="_blank">Instrukcja obsługi</a></li>
+                    
+                    <li><a href="https://github.com/Kulencjusz" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a></li>
+                </ul>
+            </nav>
+        </div>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    </div>
+    <h1><a href="index.html">Game Development</a></h1>
+    <div class="search" id="login-register-section">
+        <input type="text" placeholder="Wyszukaj na stronie...">
+        <a href="login.html" class="button">ZALOGUJ SIĘ</a>
+        <a href="register.html" class="button-text">ZAREJESTRUJ SIĘ</a>
+    </div>
+    <div id="user-section" style="display: none;">
+        <span>Witaj, <span id="username"></span></span>
+        <button onclick="logout()">Wyloguj się</button>
+    </div>
+    <header class="menu">
+        <nav class="menu-list">
+            <ul>
+                <li><a href="articles.html" id="articles-link">ARTYKUŁY</a></li>
+                <li><a href="projects.html" id="projects-link">PROJEKTY</a></li>
+                <li><a href="forum.html" id="forum-link">FORUM</a></li>
+                <li><a href="community.html" id="community-link">SPOŁECZNOŚĆ</a></li>
+                <li><a class="active" href="about.html" id="about-link">O NAS</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="content-container">
+        <div class="main-panel">
+            <h2>Game Development</h2>
+            <h3>Wszystko co musisz wiedzieć, aby zacząć przygodę z tworzeniem gier.</h3>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;Tworzenie gier to fascynująca i kreatywna droga, która pozwala wyrazić swoją wyobraźnię 
+                i umiejętności programistyczne w równym stopniu. Niezależnie od tego, czy jesteś początkującym, 
+                czy doświadczonym programistą, oto kilka kluczowych kroków, które pomogą Ci rozpocząć swoją przygodę
+                z game developmentem. <br><br><b>1. Wybierz odpowiednią platformę i narzędzia</b><br><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;Pierwszym krokiem w tworzeniu gier jest wybór odpowiedniej platformy oraz narzędzi. Na rynku istnieje 
+                wiele platform do wyboru, w tym PC, konsoli, urządzenia mobilne czy nawet przeglądarki internetowe. 
+                Zastanów się, na jakiej platformie chciałbyś udostępniać swoje gry, oraz jakie narzędzia będą dla Ciebie 
+                najbardziej odpowiednie. Popularne narzędzia do tworzenia gier obejmują Unity, Unreal Engine, GameMaker 
+                Studio czy Godot Engine.<br><br><b>2. Nauka podstaw programowania</b><br><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;Podstawą każdej gry jest kod. Dlatego warto nauczyć się podstaw programowania. Jeśli dopiero zaczynasz, 
+                zacznij od języka, który jest łatwy do nauki, takiego jak Python lub JavaScript. Zrozumienie podstawowych 
+                koncepcji programowania, takich jak zmienne, pętle i funkcje, pomoże Ci w bardziej zaawansowanych aspektach 
+                tworzenia gier.<br><br><b>3. Zdobądź wiedzę na temat designu gier</b><br><br>
+                Tworzenie gier to nie tylko programowanie. Warto również poznać podstawy designu gier, w tym takie elementy jak 
+                mechanika gry, narracja, poziomy, oraz balansowanie trudności. Zrozumienie tych koncepcji pomoże Ci stworzyć gry, 
+                które nie tylko wyglądają dobrze, ale również są ciekawe i satysfakcjonujące dla graczy.<br><br>
+                <b>4. Ćwicz regularnie</b><br><br>Jak w każdej dziedzinie, regularne ćwiczenie jest kluczem do sukcesu. Nie spodziewaj 
+                się, że od razu stworzysz arcydzieło. Zamiast tego, poświęć czas na regularne praktykowanie swoich umiejętności. 
+                Twórz proste projekty, eksperymentuj, popełniaj błędy i ucz się na nich.<br><br><b>5. Korzystaj z dostępnych zasobów i 
+                społeczności</b><br><br>Nie bój się korzystać z dostępnych zasobów i społeczności online. Istnieje wiele kursów, tutoriali, 
+                forum dyskusyjnych oraz społeczności programistycznych, które mogą Ci pomóc w nauce i rozwiązaniu problemów podczas tworzenia 
+                gier. Nie wahaj się również zadawać pytań i dzielić się swoimi doświadczeniami z innymi.<br><br><b>Podsumowanie</b><br><br>
+                Tworzenie gier to fascynująca podróż, która wymaga poświęcenia czasu, cierpliwości i determinacji. Pamiętaj, że każdy zaczął 
+                od zera, więc nie zniechęcaj się, jeśli początkowo napotkasz trudności. Wystarczy trochę praktyki i wytrwałości, aby osiągnąć
+                swoje cele w dziedzinie game developmentu. Powodzenia!<br><br><br></p>
+            <img src="about.jpg" alt="Gra wykonana w Unreal Engine">
+            <h2>O Studiu Kulencjusz</h2>
+                <h3>
+                Witajcie w Studio Kulencjusz - miejscu, gdzie magiczne światy i niezwykłe przygody ożywają na ekranie! 
+                Jesteśmy zespołem pełnym pasji i zapału, który tworzy gry, które przekraczają granice wyobraźni.</h3>
+            <p>
+                <b>Nasza Misja</b>
+                <br><br>
+                Naszą misją jest dostarczanie wyjątkowych, angażujących i porywających doświadczeń w świecie gier komputerowych.
+                 Wierzymy, że gry mogą być więcej niż tylko rozrywką - mogą być źródłem inspiracji, emocji i refleksji. Dlatego też, 
+                 w każdym projekcie, staramy się tworzyć gry, które nie tylko bawią, ale także poruszają i pozostają w pamięci na długo
+                  po zakończeniu rozgrywki.
+                <br><br>
+                <b>Nasza Filozofia</b>
+                <br><br>
+                W Studio Kulencjusz kładziemy duży nacisk na kreatywność, innowację i jakość. Nasze projekty powstają w wyniku połączenia
+                 pasji do gier z zaawansowaną technologią i profesjonalnym podejściem. Nie boimy się wyzwań ani eksperymentów - zawsze dążymy
+                  do tego, aby nasze gry były unikatowe i wyjątkowe pod każdym względem.
+                <br><br>
+                <b>Nasze Projekty</b>
+                <br><br>
+                Dotychczasowe projekty Studia Kulencjusz obejmują szeroki zakres gatunków i platform. Od epickich RPGów po dynamiczne gry 
+                akcji, od gier mobilnych po tytuły na konsole - nasze portfolio jest zróżnicowane i bogate w różnorodność. Każdy nasz projekt
+                 jest wyrazem naszej pasji i zaangażowania w tworzenie czegoś wyjątkowego i niezapomnianego.
+                <br><br>
+                <b>Dołącz do Nas</b>
+                <br><br>
+                Jeśli jesteś pasjonatem gier komputerowych, tworzenia światów wirtualnych i odkrywania nowych możliwości, to Studio Kulencjusz
+                 jest miejscem dla Ciebie! Poszukujemy osób, które podzielają naszą pasję i chcą tworzyć gry, które będą inspiracją dla milionów 
+                 graczy na całym świecie. Dołącz do naszej rodziny i razem stwórzmy coś niesamowitego!
+                <br><br>
+                <b>Kontakt</b>
+                <br><br>
+                Jeśli chcesz dowiedzieć się więcej o Studiu Kulencjusz lub masz pytania dotyczące naszych projektów, skontaktuj się z nami przez 
+                naszą stronę internetową lub media społecznościowe. Jesteśmy otwarci na współpracę i nowe możliwości, więc nie wahaj się dać nam 
+                znać!</p>
+            <img src="kul.jpg" alt="Icon Studia Kulencjusz">
+            <p class="next-button"><a onclick="scrollToTop()">Top ↑</a></p>
+        </div>
+        <div class="new-projects">
+            <h4>Ostatnio dodane projekty</h4>
+            <p class="article2">Autor: Kulencjusz<br>Tytuł: Haunted Forest</p>
+            <p><a href="projects.html">Graj</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer-content">
+            <ul>
+                <li>KONTAKT wwfire@vp.pl</li>
+                <li>Copyright @ 2024 Kulencjusz</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
